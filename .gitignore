@@ -4,6 +4,7 @@ Desktop.ini
 .DS_Store
 
 # IDE & Assistant artifacts
+.agents
 .system_generated/
 .gemini/
 brain/
@@ -21,3 +22,4 @@ backend-tools/keys/*.json
 service-account-key.json
 *.env
 *.env.local
+tools/*
