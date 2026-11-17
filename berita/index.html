@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Warta resmi sekolah, maklumat pengumuman kedinasan, kabar kegiatan belajar mengajar, kurikulum merdeka P5, dan dokumentasi prestasi SDN Punggul 02 Gedangan - Sidoarjo.">
+<title>Warta, Agenda, &amp; Pengumuman Sekolah | SDN Punggul 02</title>
+<link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/pages/berita.css">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+<div id="site-preloader" class="site-preloader" aria-hidden="true">
+<div class="preloader-content">
+<div class="preloader-logo-wrap">
+<div class="preloader-spinner"></div>
+<img src="/assets/img/logo/tiny-logo.webp" alt="Logo SDN Punggul 02" class="preloader-logo" width="48" height="48">
+</div>
+<div class="preloader-brand">SDN PUNGGUL 02</div>
+<div class="preloader-progress"><div class="preloader-bar"></div></div>
+</div>
+</div>
+<div id="app-header"></div>
+<main id="main-content">
+<section class="page-hero-berita">
+<div class="container">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="/index.html">Beranda</a>
+<i class="ph-bold ph-caret-right"></i>
+<span>Warta &amp; Pengumuman</span>
+</nav>
+<span class="berita-chip"><i class="ph-fill ph-newspaper"></i> Kanal Publikasi Resmi UPT SDN Punggul 02</span>
+<h1>Warta, Agenda, &amp; Pengumuman Sekolah</h1>
+<p class="lead">Pusat informasi resmi kegiatan belajar mengajar, sosialisasi kedinasan, kalender agenda akademik, dan etalase prestasi siswa di Gedangan - Sidoarjo.</p>
+<div class="berita-search-bar">
+<input type="text" id="berita-search-input" placeholder="Cari warta, edaran, atau agenda sekolah..." aria-label="Cari warta sekolah">
+<button type="button" class="search-icon-btn" aria-label="Lakukan Pencarian"><i class="ph-bold ph-magnifying-glass"></i></button>
+</div>
+</div>
+</section>
+<section class="section-py" aria-label="Daftar Warta dan Pengumuman">
+<div class="container">
+<div id="featured-story-container" class="featured-story-wrap"></div>
+<div class="berita-filter-bar" role="tablist" aria-label="Filter Kategori Warta">
+<button type="button" class="filter-btn active" data-filter="all">Semua Warta</button>
+<button type="button" class="filter-btn" data-filter="Pengumuman">Pengumuman Kedinasan</button>
+<button type="button" class="filter-btn" data-filter="KBM">Kabar KBM &amp; Siswa</button>
+<button type="button" class="filter-btn" data-filter="Kurikulum">Kurikulum &amp; P5</button>
+<button type="button" class="filter-btn" data-filter="Prestasi">Prestasi Murid</button>
+</div>
+<div class="berita-layout">
+<div class="berita-main-col">
+<div class="berita-grid" id="berita-grid-container">
+<div class="card p-3 text-center text-muted">Memuat warta sekolah...</div>
+</div>
+</div>
+<div id="app-sidebar"></div>
+</div>
+</div>
+</section>
+</main>
+<div class="modal-backdrop" id="berita-modal" role="dialog" aria-modal="true" aria-labelledby="modal-article-title">
+<div class="modal-container">
+<div class="modal-header">
+<div class="modal-title-row">
+<span class="modal-badge" id="modal-article-cat">Warta</span>
+<div class="modal-title" id="modal-article-title">Detail Warta</div>
+</div>
+<button type="button" class="modal-close" id="berita-modal-close" aria-label="Tutup Pembaca Warta"><i class="ph ph-x"></i></button>
+</div>
+<div class="modal-body">
+<div class="modal-media">
+<img id="modal-article-img" src="/assets/img/gedung-sekolah.jpg" alt="Dokumentasi Warta" width="760" height="428">
+</div>
+<div class="modal-content-panel">
+<div class="modal-article-meta">
+<span><i class="ph-bold ph-calendar"></i><span id="modal-article-date">-</span></span>
+<span><i class="ph-bold ph-user"></i><span id="modal-article-author">-</span></span>
+</div>
+<div class="modal-article-paragraphs" id="modal-article-paragraphs">
+<p>-</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="app-footer"></div>
+<script src="/assets/js/base/layout.js"></script>
+<script src="/assets/js/components/navigation.js"></script>
+<script src="/assets/js/components/preloader.js"></script>
+<script src="/assets/js/pages/berita.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE & Assistant artifacts
+.system_generated/
+.gemini/
+brain/
+*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Backend tools & secrets
+node_modules/
+backend-tools/node_modules/
+backend-tools/keys/*.json
+service-account-key.json
+*.env
+*.env.local

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ekskul-1",
+    "nama": "Pramuka Siaga & Penggalang",
+    "kategori": "Wajib",
+    "deskripsi": "Membina kedisiplinan, kemandirian, kekompakan, dan kepemimpinan berkarakter.",
+    "pembina": "Nanang Supriyadi, S.Pd.",
+    "jadwal": "Jumat, 14.00 - 16.00 WIB",
+    "gambar": "/assets/img/kegiatan-pramuka.jpg"
+  },
+  {
+    "id": "ekskul-2",
+    "nama": "Seni Tari Tradisional Jawa Timur",
+    "kategori": "Pilihan",
+    "deskripsi": "Melestarikan seni tari daerah Jawa Timur dan membina bakat ajang FLS2N.",
+    "pembina": "Siti Aminah, S.Pd.",
+    "jadwal": "Rabu, 14.30 - 16.00 WIB",
+    "gambar": "/assets/img/kegiatan-siswa-hero.jpg"
+  },
+  {
+    "id": "ekskul-3",
+    "nama": "Senam & Kebugaran Jasmani Siswa",
+    "kategori": "Pilihan",
+    "deskripsi": "Mengembangkan kebugaran fisik, kelincahan motorik, dan sportivitas olahraga atletik.",
+    "pembina": "Rizky Pratama, S.Pd.",
+    "jadwal": "Selasa, 15.00 - 16.30 WIB",
+    "gambar": "/assets/img/kegiatan-olahraga.jpg"
+  },
+  {
+    "id": "ekskul-4",
+    "nama": "Kader Lingkungan Hidup Adiwiyata",
+    "kategori": "Pilihan",
+    "deskripsi": "Praktik budidaya tanaman obat, komposting, dan aksi nyata sekolah bebas sampah.",
+    "pembina": "Tri Wahyuni, S.Pd.",
+    "jadwal": "Sabtu, 07.30 - 09.00 WIB",
+    "gambar": "/assets/img/kegiatan-adiwiyata.jpg"
+  },
+  {
+    "id": "ekskul-5",
+    "nama": "Literasi Komputer & Digital Lab",
+    "kategori": "Pilihan",
+    "deskripsi": "Mengenalkan dasar komputasi, internet sehat, dan ketikan digital persiapan ANBK.",
+    "pembina": "Dewi Anggraini, A.Md.",
+    "jadwal": "Kamis, 14.30 - 16.00 WIB",
+    "gambar": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format"
+  },
+  {
+    "id": "ekskul-6",
+    "nama": "Drumband Gita Suara Punggul 02",
+    "kategori": "Pilihan",
+    "deskripsi": "Melatih musikalitas ritmis, ansambel perkusi, dan kekompakan baris-berbaris.",
+    "pembina": "Pelatih Khusus Kesenian",
+    "jadwal": "Sabtu, 08.00 - 10.00 WIB",
+    "gambar": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format"
+  }
+]

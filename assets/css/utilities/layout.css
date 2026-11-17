@@ -1,0 +1,39 @@
+.container{width:100%;max-width:var(--container-max-width);margin-left:auto;margin-right:auto;padding-left:var(--container-padding);padding-right:var(--container-padding);min-width:0;}
+.section-py{padding-top:var(--space-xl);padding-bottom:var(--space-xl);width:100%;}
+.section-py-lg{padding-top:var(--space-2xl);padding-bottom:var(--space-2xl);width:100%;}
+.grid-layout,.flex-layout,.bento-grid{min-width:0;width:100%;}
+.grid-layout>*, .flex-layout>*, .bento-grid>*{min-width:0;}
+.d-flex{display:flex;}
+.d-grid{display:grid;}
+.flex-column{display:flex;flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
+.align-center{align-items:center;}
+.align-start{align-items:flex-start;}
+.justify-between{justify-content:space-between;}
+.justify-center{justify-content:center;}
+.justify-end{justify-content:flex-end;}
+.gap-xs{gap:var(--space-xs);}
+.gap-sm{gap:var(--space-sm);}
+.gap-md{gap:var(--space-md);}
+.gap-lg{gap:var(--space-lg);}
+.gap-xl{gap:var(--space-xl);}
+.grid-cols-1{display:grid;grid-template-columns:1fr;gap:var(--space-md);min-width:0;width:100%;}
+.bento-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md);min-width:0;width:100%;}
+@media (min-width:640px){
+.section-py{padding-top:var(--space-2xl);padding-bottom:var(--space-2xl);}
+.section-py-lg{padding-top:var(--space-3xl);padding-bottom:var(--space-3xl);}
+.grid-cols-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-lg);min-width:0;width:100%;}
+.grid-cols-1{gap:var(--space-lg);}
+.bento-grid{gap:var(--space-lg);}
+}
+@media (min-width:768px){
+.bento-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+.bento-span-2{grid-column:span 2;}
+}
+@media (min-width:1024px){
+.grid-cols-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-lg);min-width:0;width:100%;}
+.grid-cols-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-lg);min-width:0;width:100%;}
+.bento-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
+.bento-span-3{grid-column:span 3;}
+.bento-span-4{grid-column:span 4;}
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "prestasi-1",
+    "nama": "Juara 1 Cerdas Cermat MIPA",
+    "tingkat": "Kec. Gedangan",
+    "tahun": "2026",
+    "peraih": "Tim Olimpiade Kelas 5",
+    "kategori": "Akademik"
+  },
+  {
+    "id": "prestasi-2",
+    "nama": "Juara 2 Drumband Pelajar SD",
+    "tingkat": "Kab. Sidoarjo",
+    "tahun": "2026",
+    "peraih": "Gita Suara Punggul 02",
+    "kategori": "Seni Musik"
+  },
+  {
+    "id": "prestasi-3",
+    "nama": "Juara 1 Tari Kreasi FLS2N",
+    "tingkat": "Kec. Gedangan",
+    "tahun": "2025",
+    "peraih": "Sanggar Tari Sekolah",
+    "kategori": "Seni Budaya"
+  },
+  {
+    "id": "prestasi-4",
+    "nama": "Piala Bergilir Juara Umum Pramuka",
+    "tingkat": "Kec. Gedangan",
+    "tahun": "2025",
+    "peraih": "Regu Penggalang Gudep",
+    "kategori": "Kepramukaan"
+  },
+  {
+    "id": "prestasi-5",
+    "nama": "Sekolah Adiwiyata Kabupaten",
+    "tingkat": "Kab. Sidoarjo",
+    "tahun": "2025",
+    "peraih": "SDN Punggul 02",
+    "kategori": "Lingkungan Hidup"
+  }
+]

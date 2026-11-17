@@ -1,0 +1,78 @@
+.page-hero-kontak{background:linear-gradient(135deg,var(--color-primary) 0%,#092f44 100%);color:#ffffff;padding:var(--space-2xl) 0 var(--space-xl);position:relative;overflow:hidden;}
+.page-hero-kontak .breadcrumb{display:flex;align-items:center;gap:var(--space-xs);font-size:0.875rem;margin-bottom:var(--space-md);color:rgba(255,255,255,0.8);}
+.page-hero-kontak .breadcrumb a{color:#ffffff;text-decoration:none;transition:color 0.2s ease;}
+.page-hero-kontak .breadcrumb a:hover{color:var(--color-accent);}
+.kontak-chip{display:inline-flex;align-items:center;gap:6px;background-color:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius-full);padding:6px 14px;font-size:0.8125rem;font-weight:600;margin-bottom:var(--space-md);color:var(--color-accent-light);}
+.page-hero-kontak h1{font-size:2rem;font-weight:800;line-height:1.2;margin-bottom:var(--space-sm);color:#ffffff;}
+.page-hero-kontak .lead{font-size:1rem;line-height:1.6;color:rgba(255,255,255,0.9);max-width:820px;}
+@media (min-width:768px){
+.page-hero-kontak{padding:var(--space-3xl) 0 var(--space-2xl);}
+.page-hero-kontak h1{font-size:2.5rem;}
+.page-hero-kontak .lead{font-size:1.125rem;}
+}
+.posko-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg);margin-top:var(--space-lg);min-width:0;}
+.posko-card{background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-lg);box-shadow:var(--shadow-sm);transition:transform 0.2s ease,box-shadow 0.2s ease;display:flex;flex-direction:column;min-width:0;}
+.posko-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--color-primary-light);}
+.posko-header{display:flex;align-items:center;justify-content:space-between;gap:var(--space-xs);margin-bottom:var(--space-sm);flex-wrap:wrap;}
+.posko-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:var(--radius-full);font-size:0.6875rem;font-weight:700;}
+.badge-spmb{background-color:#fef3c7;color:#92400e;}
+.badge-tu{background-color:#eaf4f9;color:#075985;}
+.badge-konseling{background-color:#e8f7f5;color:#115e59;}
+.posko-icon{width:48px;height:48px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:var(--space-sm);}
+.posko-icon-spmb{background-color:#fef3c7;color:#d97706;}
+.posko-icon-tu{background-color:#eaf4f9;color:var(--color-primary);}
+.posko-icon-konseling{background-color:#e8f7f5;color:var(--color-secondary);}
+.posko-title{font-size:1.125rem;font-weight:700;color:var(--color-text-main);margin-bottom:var(--space-xs);line-height:1.3;}
+.posko-desc{font-size:0.875rem;color:var(--color-text-muted);line-height:1.6;margin-bottom:var(--space-md);}
+.posko-action{margin-top:auto;}
+.posko-btn{display:inline-flex;align-items:center;gap:6px;font-size:0.8125rem;font-weight:700;color:var(--color-primary);text-decoration:none;transition:color 0.2s ease;min-height:44px;}
+.posko-btn:hover{color:var(--color-accent);}
+@media (min-width:768px){
+.posko-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+.kontak-layout{display:grid;grid-template-columns:1fr;gap:var(--space-2xl);min-width:0;width:100%;}
+.office-info-card{background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-xl);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-lg);min-width:0;}
+.office-title-row{display:flex;flex-direction:column;gap:4px;border-bottom:1px solid var(--color-border);padding-bottom:var(--space-md);}
+.office-card-title{font-size:1.375rem;font-weight:800;color:var(--color-text-main);}
+.office-card-sub{font-size:0.875rem;color:var(--color-text-muted);}
+.office-items-list{display:flex;flex-direction:column;gap:var(--space-md);}
+.office-item{display:flex;align-items:flex-start;gap:var(--space-md);min-width:0;}
+.office-icon{width:44px;height:44px;border-radius:var(--radius-md);background-color:var(--color-primary-light);color:var(--color-primary);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;}
+.office-text{display:flex;flex-direction:column;gap:2px;min-width:0;}
+.office-label{font-size:0.75rem;font-weight:700;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.04em;}
+.office-value{font-size:0.9375rem;font-weight:600;color:var(--color-text-main);line-height:1.5;overflow-wrap:break-word;}
+.office-value a{color:var(--color-primary);text-decoration:none;transition:color 0.2s ease;}
+.office-value a:hover{color:var(--color-accent);}
+.route-guide-box{background-color:var(--color-surface-subtle);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-md);display:flex;flex-direction:column;gap:6px;}
+.route-guide-title{font-size:0.875rem;font-weight:700;color:var(--color-text-main);display:flex;align-items:center;gap:6px;}
+.route-guide-desc{font-size:0.8125rem;color:var(--color-text-muted);line-height:1.5;}
+.kontak-form-card{background-color:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-xl);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-md);min-width:0;}
+.form-title-row{display:flex;flex-direction:column;gap:4px;border-bottom:1px solid var(--color-border);padding-bottom:var(--space-md);}
+.form-card-title{font-size:1.375rem;font-weight:800;color:var(--color-text-main);}
+.form-card-sub{font-size:0.875rem;color:var(--color-text-muted);}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:var(--space-sm);min-width:0;width:100%;}
+.form-label{font-size:0.875rem;font-weight:700;color:var(--color-text-main);}
+.form-control{width:100%;min-height:46px;padding:10px 14px;border:1px solid var(--color-border);border-radius:var(--radius-md);background-color:var(--color-surface);color:var(--color-text-main);transition:border-color 0.2s ease,box-shadow 0.2s ease;font-size:0.9375rem;}
+.form-control:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px var(--color-primary-light);outline:none;}
+textarea.form-control{min-height:120px;resize:vertical;}
+.form-actions-row{display:flex;flex-direction:column;gap:var(--space-sm);margin-top:var(--space-sm);}
+.toast-notification{display:none;align-items:flex-start;gap:var(--space-sm);padding:var(--space-md);border-radius:var(--radius-md);background-color:#dcfce7;color:#166534;border:1px solid #bbf7d0;font-size:0.875rem;line-height:1.5;margin-top:var(--space-sm);box-shadow:var(--shadow-sm);}
+.toast-notification.active{display:flex;}
+.toast-notification i{font-size:1.25rem;flex-shrink:0;color:#16a34a;margin-top:2px;}
+.toast-notification-body{flex:1;min-width:0;}
+.toast-notification-body strong{display:block;margin-bottom:2px;}
+.toast-close-btn{background:none;border:none;color:#166534;font-size:1.125rem;cursor:pointer;padding:0;margin-left:auto;}
+@media (min-width:640px){
+.form-actions-row{flex-direction:row;align-items:center;}
+}
+@media (min-width:1024px){
+.kontak-layout{grid-template-columns:1fr 1.2fr;}
+}
+.map-frame-wrapper{border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--color-border);box-shadow:var(--shadow-md);margin-top:var(--space-2xl);aspect-ratio:16/9;min-width:0;width:100%;}
+.map-frame-wrapper iframe{width:100%;height:100%;border:0;}
+@media (min-width:768px){
+.map-frame-wrapper{aspect-ratio:21/9;}
+}
+html.dark-mode .toast-notification{background-color:#064e3b;color:#6ee7b7;border-color:#047857;}
+html.dark-mode .toast-notification i{color:#34d399;}
+html.dark-mode .toast-close-btn{color:#6ee7b7;}

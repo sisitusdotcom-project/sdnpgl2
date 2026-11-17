@@ -1,0 +1,92 @@
+[
+  {
+    "id": "gtk-1",
+    "nama": "Dra. Hj. Siti Rohmah, M.Pd.",
+    "jabatan": "Kepala Sekolah",
+    "kategori": "Pimpinan",
+    "nip": "19720514 199803 2 004",
+    "pendidikan": "S2 Manajemen Pendidikan",
+    "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format"
+  },
+  {
+    "id": "gtk-2",
+    "nama": "Nurul Hidayati, S.Pd.",
+    "jabatan": "Wali Kelas 1 & Pembina Karakter",
+    "kategori": "Guru Kelas",
+    "nip": "19881105 201403 2 002",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&auto=format"
+  },
+  {
+    "id": "gtk-3",
+    "nama": "Endang Sulistyowati, S.Pd.",
+    "jabatan": "Wali Kelas 2 & Pembina Literasi",
+    "kategori": "Guru Kelas",
+    "nip": "19860314 201101 2 018",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&auto=format"
+  },
+  {
+    "id": "gtk-4",
+    "nama": "Siti Aminah, S.Pd.",
+    "jabatan": "Wali Kelas 3 & Seni Budaya",
+    "kategori": "Guru Kelas",
+    "nip": "19900218 201503 2 006",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&auto=format"
+  },
+  {
+    "id": "gtk-5",
+    "nama": "Tri Wahyuni, S.Pd.",
+    "jabatan": "Wali Kelas 4 & Tim Adiwiyata",
+    "kategori": "Guru Kelas",
+    "nip": "19870912 201001 2 021",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&auto=format"
+  },
+  {
+    "id": "gtk-6",
+    "nama": "Nanang Supriyadi, S.Pd.",
+    "jabatan": "Wali Kelas 5 & Pembina Pramuka",
+    "kategori": "Guru Kelas",
+    "nip": "19840523 200801 1 009",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format"
+  },
+  {
+    "id": "gtk-7",
+    "nama": "Ahmad Fauzi, S.Pd.SD.",
+    "jabatan": "Wali Kelas 6 & Koordinator Kurikulum",
+    "kategori": "Guru Kelas",
+    "nip": "19830821 200902 1 003",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format"
+  },
+  {
+    "id": "gtk-8",
+    "nama": "M. Budi Santoso, S.Pd.I.",
+    "jabatan": "Guru Pendidikan Agama Islam (PAI)",
+    "kategori": "Guru Mapel",
+    "nip": "19850412 201001 1 015",
+    "pendidikan": "S1 Tarbiyah PAI",
+    "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format"
+  },
+  {
+    "id": "gtk-9",
+    "nama": "Rizky Pratama, S.Pd.",
+    "jabatan": "Guru PJOK & Pembina Olahraga",
+    "kategori": "Guru Mapel",
+    "nip": "19920317 201903 1 007",
+    "pendidikan": "S1 Pendidikan Jasmani",
+    "foto": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format"
+  },
+  {
+    "id": "gtk-10",
+    "nama": "Dewi Anggraini, A.Md.",
+    "jabatan": "Staf Tata Usaha & Operator Dapodik",
+    "kategori": "Tenaga Kependidikan",
+    "nip": "19940728 202012 2 009",
+    "pendidikan": "D3 Administrasi Perkantoran",
+    "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format"
+  }
+]

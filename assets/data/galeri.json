@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "judul": "Apel Akbar Pramuka Gugus Depan SDN Punggul 2",
+    "kategori": "Pramuka",
+    "tanggal": "Setiap Sabtu Pagi",
+    "deskripsi": "Pembinaan karakter mandiri, kepemimpinan regu, kecakapan berkemah, dan tali-temali pandu Siaga & Penggalang.",
+    "img": "/assets/img/kegiatan-pramuka.jpg"
+  },
+  {
+    "id": 2,
+    "judul": "Senam Kesegaran Jasmani (SKJ) Jumat Sehat",
+    "kategori": "Olahraga",
+    "tanggal": "Setiap Jumat 06.30 WIB",
+    "deskripsi": "Senam kebugaran jasmani ceria di halaman sekolah diikuti seluruh siswa, dewan guru, dan staf untuk menjaga vitalitas tubuh.",
+    "img": "/assets/img/kegiatan-olahraga.jpg"
+  },
+  {
+    "id": 3,
+    "judul": "Pembiasaan Religi & Sholat Berjamaah di Musholla",
+    "kategori": "Religi",
+    "tanggal": "Setiap Hari Sebelum KBM",
+    "deskripsi": "Sholat dhuha dan dzuhur berjamaah, hafalan surat-surat pendek, serta penanaman adab dan akhlakul karimah sejak dini.",
+    "img": "/assets/img/pembiasaan-karakter.jpg"
+  },
+  {
+    "id": 4,
+    "judul": "Pentas Seni Pahlawan & Tari Tradisional Siswa",
+    "kategori": "Seni",
+    "tanggal": "Peringatan Hari Pahlawan",
+    "deskripsi": "Unjuk bakat seni tari kreasi daerah Jawa Timur, busana adat pahlawan nasional, drama musikal, dan paduan suara siswa.",
+    "img": "/assets/img/kegiatan-siswa-hero.jpg"
+  },
+  {
+    "id": 5,
+    "judul": "Aksi Bersih Lingkungan & Adiwiyata Hijau Mandiri",
+    "kategori": "Adiwiyata",
+    "tanggal": "Gerakan Jumat Bersih",
+    "deskripsi": "Pembiasaan memilah sampah organik dan plastik, budidaya tanaman obat keluarga (TOGA), serta pemeliharaan taman sekolah.",
+    "img": "/assets/img/kegiatan-adiwiyata.jpg"
+  },
+  {
+    "id": 6,
+    "judul": "Upacara Bendera Hari Senin di Lapangan Utama",
+    "kategori": "Upacara",
+    "tanggal": "Setiap Senin 07.00 WIB",
+    "deskripsi": "Penghormatan bendera merah putih, pembacaan teks Pancasila dan UUD 1945, serta amanat kedisiplinan pembina upacara.",
+    "img": "/assets/img/gedung-sekolah.jpg"
+  },
+  {
+    "id": 7,
+    "judul": "Penyambutan Siswa di Pintu Gerbang Sekolah (5S)",
+    "kategori": "Pembiasaan",
+    "tanggal": "Senin - Sabtu 06.30 WIB",
+    "deskripsi": "Penerapan Senyum, Sapa, Salam, Sopan, dan Santun oleh bapak dan ibu guru piket menyambut kedatangan siswa.",
+    "img": "/assets/img/gerbang-sekolah.jpg"
+  },
+  {
+    "id": 8,
+    "judul": "Pendampingan Belajar Bersama Dewan Guru",
+    "kategori": "Pembiasaan",
+    "tanggal": "Kegiatan Rutin Sekolah",
+    "deskripsi": "Pemberian bimbingan belajar yang inklusif, sabar, dan penuh kasih sayang dalam mewujudkan profil Sekolah Ramah Anak.",
+    "img": "/assets/img/dewan-guru.jpg"
+  }
+]
