@@ -1,78 +1,141 @@
 [
   {
     "id": "gtk-1",
-    "nama": "Dra. Hj. Siti Rohmah, M.Pd.",
+    "nama": "Oktaf Winda Wanodya Utama",
     "jabatan": "Kepala Sekolah",
     "kategori": "Pimpinan",
-    "nip": "19720514 199803 2 004",
-    "pendidikan": "S2 Manajemen Pendidikan",
+    "nip": "Kepala Sekolah UPTD SDN Punggul 2",
+    "pendidikan": "Penugasan Disdikbud Sidoarjo",
     "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format"
   },
   {
     "id": "gtk-2",
-    "nama": "Nurul Hidayati, S.Pd.",
-    "jabatan": "Wali Kelas 1 & Pembina Karakter",
+    "nama": "Ibnu Widi Winarto, S.Pd.",
+    "jabatan": "Guru Kelas / Pendidik",
     "kategori": "Guru Kelas",
-    "nip": "19881105 201403 2 002",
-    "pendidikan": "S1 PGSD",
-    "foto": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&auto=format"
+    "nip": "19690829 200801 1 011",
+    "pendidikan": "PNS Disdikbud Sidoarjo",
+    "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format"
   },
   {
     "id": "gtk-3",
-    "nama": "Endang Sulistyowati, S.Pd.",
-    "jabatan": "Wali Kelas 2 & Pembina Literasi",
+    "nama": "Sulasminingsih, S.Pd.",
+    "jabatan": "Guru Kelas / Pendidik",
     "kategori": "Guru Kelas",
-    "nip": "19860314 201101 2 018",
-    "pendidikan": "S1 PGSD",
+    "nip": "19680410 200604 2 006",
+    "pendidikan": "PNS Disdikbud Sidoarjo",
     "foto": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&auto=format"
   },
   {
     "id": "gtk-4",
+    "nama": "Pendidik Kelas (PPPK)",
+    "jabatan": "Ahli Pertama - Guru Kelas",
+    "kategori": "Guru Kelas",
+    "nip": "19850206 202221 2 030",
+    "pendidikan": "PPPK Kab. Sidoarjo",
+    "foto": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&auto=format"
+  },
+  {
+    "id": "gtk-5",
+    "nama": "Endang Sulistyowati, S.Pd.",
+    "jabatan": "Guru Kelas & Pembina Literasi",
+    "kategori": "Guru Kelas",
+    "nip": "19860314 201101 2 018",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format"
+  },
+  {
+    "id": "gtk-6",
     "nama": "Siti Aminah, S.Pd.",
-    "jabatan": "Wali Kelas 3 & Seni Budaya",
+    "jabatan": "Guru Kelas & Seni Budaya",
     "kategori": "Guru Kelas",
     "nip": "19900218 201503 2 006",
     "pendidikan": "S1 PGSD",
     "foto": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&auto=format"
   },
   {
-    "id": "gtk-5",
+    "id": "gtk-7",
+    "nama": "Wahyu Pratama, S.Pd.",
+    "jabatan": "Guru Kelas & Pembina Pramuka Siaga",
+    "kategori": "Guru Kelas",
+    "nip": "19930511 201902 1 004",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format"
+  },
+  {
+    "id": "gtk-8",
     "nama": "Tri Wahyuni, S.Pd.",
-    "jabatan": "Wali Kelas 4 & Tim Adiwiyata",
+    "jabatan": "Guru Kelas & Tim Adiwiyata",
     "kategori": "Guru Kelas",
     "nip": "19870912 201001 2 021",
     "pendidikan": "S1 PGSD",
     "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&auto=format"
   },
   {
-    "id": "gtk-6",
+    "id": "gtk-9",
+    "nama": "Agus Santoso, S.Pd.",
+    "jabatan": "Guru Kelas & Eksplorasi Sains",
+    "kategori": "Guru Kelas",
+    "nip": "19850817 200903 1 006",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format"
+  },
+  {
+    "id": "gtk-10",
     "nama": "Nanang Supriyadi, S.Pd.",
-    "jabatan": "Wali Kelas 5 & Pembina Pramuka",
+    "jabatan": "Guru Kelas & Pembina Pramuka Penggalang",
     "kategori": "Guru Kelas",
     "nip": "19840523 200801 1 009",
     "pendidikan": "S1 PGSD",
     "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format"
   },
   {
-    "id": "gtk-7",
+    "id": "gtk-11",
+    "nama": "Sri Utami, S.Pd.",
+    "jabatan": "Guru Kelas & Koordinator P5",
+    "kategori": "Guru Kelas",
+    "nip": "19880214 201402 2 003",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format"
+  },
+  {
+    "id": "gtk-12",
     "nama": "Ahmad Fauzi, S.Pd.SD.",
-    "jabatan": "Wali Kelas 6 & Koordinator Kurikulum",
+    "jabatan": "Guru Kelas & Koordinator Kurikulum",
     "kategori": "Guru Kelas",
     "nip": "19830821 200902 1 003",
     "pendidikan": "S1 PGSD",
-    "foto": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format"
+    "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format"
   },
   {
-    "id": "gtk-8",
+    "id": "gtk-13",
+    "nama": "Rina Kusuma, S.Pd.",
+    "jabatan": "Guru Kelas & Sukses Kelulusan SMP",
+    "kategori": "Guru Kelas",
+    "nip": "19861208 201101 2 015",
+    "pendidikan": "S1 PGSD",
+    "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format"
+  },
+  {
+    "id": "gtk-14",
     "nama": "M. Budi Santoso, S.Pd.I.",
     "jabatan": "Guru Pendidikan Agama Islam (PAI)",
     "kategori": "Guru Mapel",
     "nip": "19850412 201001 1 015",
     "pendidikan": "S1 Tarbiyah PAI",
-    "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format"
+    "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format"
   },
   {
-    "id": "gtk-9",
+    "id": "gtk-15",
+    "nama": "Muhammad Ilham, S.Pd.I.",
+    "jabatan": "Guru PAI & Pembina Tahfidz",
+    "kategori": "Guru Mapel",
+    "nip": "19920115 201903 1 005",
+    "pendidikan": "S1 Tarbiyah PAI",
+    "foto": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format"
+  },
+  {
+    "id": "gtk-16",
     "nama": "Rizky Pratama, S.Pd.",
     "jabatan": "Guru PJOK & Pembina Olahraga",
     "kategori": "Guru Mapel",
@@ -81,12 +144,30 @@
     "foto": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format"
   },
   {
-    "id": "gtk-10",
-    "nama": "Dewi Anggraini, A.Md.",
-    "jabatan": "Staf Tata Usaha & Operator Dapodik",
+    "id": "gtk-17",
+    "nama": "Fajar Firmansyah, S.Pd.",
+    "jabatan": "Guru PJOK & Pembina Bela Diri",
+    "kategori": "Guru Mapel",
+    "nip": "19940910 202012 1 008",
+    "pendidikan": "S1 Pendidikan Jasmani",
+    "foto": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format"
+  },
+  {
+    "id": "gtk-18",
+    "nama": "Eka Novitasari, S.Pd.",
+    "jabatan": "Guru Bahasa Inggris & Bahasa Daerah",
+    "kategori": "Guru Mapel",
+    "nip": "19901123 201602 2 004",
+    "pendidikan": "S1 Pendidikan Bahasa",
+    "foto": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=400&auto=format"
+  },
+  {
+    "id": "gtk-19",
+    "nama": "Muhammad Nur Huda, S.M.",
+    "jabatan": "Operator Dapodik & Tenaga Kependidikan",
     "kategori": "Tenaga Kependidikan",
-    "nip": "19940728 202012 2 009",
-    "pendidikan": "D3 Administrasi Perkantoran",
-    "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format"
+    "nip": "Operator Resmi Kemendikdasmen",
+    "pendidikan": "S1 Manajemen (S.M.)",
+    "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format"
   }
 ]

@@ -27,7 +27,7 @@ Kategori: *${kategori}*
 *Pesan:*
 ${pesan}`;
 const encoded=encodeURIComponent(text);
-const waUrl=`https://wa.me/6285151983457?text=${encoded}`;
+const waUrl=`https://wa.me/6283841741718?text=${encoded}`;
 window.open(waUrl,"_blank");
 });
 }

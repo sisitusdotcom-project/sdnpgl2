@@ -1,50 +1,50 @@
 [
   {
     "id": "fasilitas-1",
-    "nama": "Gedung Sekolah Representatif & Ruang Kelas",
-    "jumlah": "6 Rombel Nyaman",
-    "deskripsi": "Gedung dua lantai yang kokoh, pencahayaan alami optimal, ventilasi sejuk, dan dilengkapi proyektor multimedia.",
+    "nama": "Ruang Kelas Pembelajaran",
+    "jumlah": "9 Ruang Kelas (17 Rombel)",
+    "deskripsi": "Ruang kelas representatif dengan pencahayaan alami dan ventilasi sejuk, menunjang sistem belajar double shift untuk 17 rombongan belajar.",
     "gambar": "/assets/img/gedung-sekolah.jpg",
     "badge": "Akademik"
   },
   {
     "id": "fasilitas-2",
-    "nama": "Lapangan Olahraga & Arena Upacara Bendera",
-    "jumlah": "1 Lapangan Luas",
-    "deskripsi": "Area outdoor berlantai paving rapi untuk upacara hari Senin, senam jasmani rutin, dan latihan bela diri.",
-    "gambar": "/assets/img/kegiatan-olahraga.jpg",
-    "badge": "Kebugaran"
-  },
-  {
-    "id": "fasilitas-3",
-    "nama": "Taman Hijau & Green House Adiwiyata",
-    "jumlah": "1 Area Terpadu",
-    "deskripsi": "Zona edukasi tanaman obat keluarga, pemilahan sampah organik-anorganik, dan pembiasaan cinta lingkungan.",
-    "gambar": "/assets/img/kegiatan-adiwiyata.jpg",
-    "badge": "Adiwiyata"
-  },
-  {
-    "id": "fasilitas-4",
-    "nama": "Pangkalan Gudep & Gerbang Masuk Ramah Anak",
-    "jumlah": "1 Gerbang Utama",
-    "deskripsi": "Akses masuk tertib dengan penjagaan keamanan, papan nama pangkalan kepramukaan, dan zona pengantaran siswa.",
-    "gambar": "/assets/img/gerbang-sekolah.jpg",
-    "badge": "Keamanan"
-  },
-  {
-    "id": "fasilitas-5",
-    "nama": "Laboratorium Komputer & Asesmen Digital (ANBK)",
-    "jumlah": "1 Unit (25 Client)",
-    "deskripsi": "Fasilitas komputer berjaringan stabil untuk pelaksanaan ANBK dan pelatihan literasi digital siswa.",
+    "nama": "Laboratorium Sekolah",
+    "jumlah": "2 Laboratorium",
+    "deskripsi": "Fasilitas 2 unit laboratorium (Laboratorium Komputer Asesmen ANBK serta Lab Sains Terpadu) dengan koneksi internet stabil.",
     "gambar": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format",
     "badge": "Digital"
   },
   {
-    "id": "fasilitas-6",
-    "nama": "Perpustakaan Ramah Anak 'Cahaya Ilmu'",
-    "jumlah": "2.000+ Koleksi Buku",
-    "deskripsi": "Koleksi buku cerita bergambar, ensiklopedia pengetahuan, dan pojok baca lesehan yang nyaman.",
+    "id": "fasilitas-3",
+    "nama": "Perpustakaan Sekolah",
+    "jumlah": "2 Perpustakaan",
+    "deskripsi": "Dua unit perpustakaan ramah anak dengan koleksi buku literasi, ensiklopedia pengetahuan, dan pojok baca kreatif.",
     "gambar": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format",
     "badge": "Literasi"
+  },
+  {
+    "id": "fasilitas-4",
+    "nama": "Lahan Kampus & Sarana Olahraga",
+    "jumlah": "Luas 2.289 m²",
+    "deskripsi": "Kawasan kampus sekolah seluas 2.289 m² dilengkapi lapangan upacara berlantai paving, lapangan olahraga siswa, dan area bermain aman.",
+    "gambar": "/assets/img/kegiatan-olahraga.jpg",
+    "badge": "Kebugaran"
+  },
+  {
+    "id": "fasilitas-5",
+    "nama": "Instalasi Listrik & Utilitas",
+    "jumlah": "PLN 3.500 VA",
+    "deskripsi": "Kapasitas daya listrik mandiri PLN 3.500 VA yang andal untuk mendukung kelancaran operasional multimedia, lab komputer, dan sarana sekolah.",
+    "gambar": "/assets/img/gerbang-sekolah.jpg",
+    "badge": "Utilitas"
+  },
+  {
+    "id": "fasilitas-6",
+    "nama": "Taman Hijau & Edukasi Adiwiyata",
+    "jumlah": "1 Area Terpadu",
+    "deskripsi": "Zona edukasi tanaman obat keluarga, biopori resapan air, dan pemilahan sampah terpadu yang membudayakan cinta kelestarian lingkungan.",
+    "gambar": "/assets/img/kegiatan-adiwiyata.jpg",
+    "badge": "Adiwiyata"
   }
 ]

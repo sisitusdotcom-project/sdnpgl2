@@ -30,13 +30,16 @@ const target=link.getAttribute("target");
 if(target==="_blank")return;
 if(e.ctrlKey||e.metaKey||e.shiftKey)return;
 if(href.startsWith("#")||href.startsWith("javascript:")||href.startsWith("mailto:")||href.startsWith("tel:"))return;
-if(href.startsWith("http://")||href.startsWith("https://")){
 try{
 const url=new URL(href,window.location.origin);
 if(url.origin!==window.location.origin)return;
-}catch(err){
+const cur=window.location.pathname.replace(/\/index\.html$/,"/").replace(/\/$/,"")||"/";
+const dest=url.pathname.replace(/\/index\.html$/,"/").replace(/\/$/,"")||"/";
+if(cur===dest&&!url.hash){
 return;
 }
+}catch(err){
+return;
 }
 e.preventDefault();
 this.show();
