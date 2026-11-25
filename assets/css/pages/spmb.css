@@ -69,6 +69,11 @@
 .faq-item.active .faq-trigger i{transform:rotate(180deg);}
 .faq-content{display:none;padding:14px 16px;color:var(--color-text-muted);border-top:1px solid var(--color-border);line-height:1.65;font-size:0.875rem;overflow-wrap:break-word;}
 .faq-item.active .faq-content{display:block;}
+@media (max-width:480px){
+.spmb-date-input{width:100%;min-width:0;}
+.calc-input-row{flex-direction:column;align-items:stretch;gap:8px;}
+.calc-input-row .btn{width:100%;}
+}
 @media (min-width:480px){
 .spmb-info-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
 .calc-input-row{flex-direction:row;}
