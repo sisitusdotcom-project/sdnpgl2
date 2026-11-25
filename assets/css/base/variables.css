@@ -82,3 +82,4 @@ html.dark-mode {
   --shadow-md: 0 4px 12px -1px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.6);
 }
+html.large-font{font-size:112.5%;}

@@ -1,9 +1,9 @@
-const KesiswaanPage={
+const GaleriPage={
 photos:[],
 async init(){
 await this.loadGallery();
 this.bindFilters();
-this.bindLightbox();
+this.bindCardClicks();
 },
 async loadGallery(){
 try{
@@ -12,14 +12,14 @@ if(!res.ok)throw new Error("HTTP "+res.status);
 this.photos=await res.json();
 this.renderGallery(this.photos);
 }catch(err){
-const container=document.getElementById("kesiswaan-gallery-container");
+const container=document.getElementById("galeri-grid-container");
 if(container){
 container.innerHTML='<div class="card p-3 text-center text-muted">Gagal memuat galeri kegiatan. Silakan muat ulang halaman.</div>';
 }
 }
 },
 renderGallery(items){
-const container=document.getElementById("kesiswaan-gallery-container");
+const container=document.getElementById("galeri-grid-container");
 if(!container)return;
 if(!items||items.length===0){
 container.innerHTML='<div class="card p-3 text-center text-muted">Tidak ada foto kegiatan pada kategori ini.</div>';
@@ -62,53 +62,23 @@ this.renderGallery(filtered);
 });
 },
 bindCardClicks(){
-const cards=document.querySelectorAll(".galeri-card");
-cards.forEach((card)=>{
+const cards=document.querySelectorAll("#galeri-grid-container .galeri-card");
+cards.forEach((card,idx)=>{
 card.addEventListener("click",()=>{
-const img=card.getAttribute("data-img");
-const title=card.getAttribute("data-title");
-const cat=card.getAttribute("data-cat");
-const date=card.getAttribute("data-date");
-const desc=card.getAttribute("data-desc");
-this.openLightbox({img,title,cat,date,desc});
+if(window.Layout&&typeof window.Layout.openLightbox==="function"){
+const currentCards=Array.from(document.querySelectorAll("#galeri-grid-container .galeri-card"));
+const items=currentCards.map((c)=>{
+const img=c.getAttribute("data-img")||c.querySelector("img")?.src||"";
+const title=c.getAttribute("data-title")||c.querySelector(".galeri-title")?.textContent||"Dokumentasi";
+const tag=c.getAttribute("data-cat")||c.querySelector(".galeri-badge")?.textContent||"Kegiatan";
+return {src:img,title,tag};
 });
+window.Layout.openLightbox(items,idx);
+}
 });
-},
-openLightbox(data){
-const modal=document.getElementById("kesiswaan-modal");
-const modalImg=document.getElementById("kesiswaan-modal-img");
-const modalTitle=document.getElementById("kesiswaan-modal-title");
-const modalCat=document.getElementById("kesiswaan-modal-cat");
-const modalDate=document.getElementById("kesiswaan-modal-date");
-const modalDesc=document.getElementById("kesiswaan-modal-desc");
-if(!modal)return;
-if(modalImg)modalImg.setAttribute("src",data.img);
-if(modalTitle)modalTitle.textContent=data.title;
-if(modalCat)modalCat.textContent=data.cat;
-if(modalDate)modalDate.textContent=data.date;
-if(modalDesc)modalDesc.textContent=data.desc;
-modal.classList.add("active");
-document.body.style.overflow="hidden";
-},
-closeLightbox(){
-const modal=document.getElementById("kesiswaan-modal");
-if(!modal)return;
-modal.classList.remove("active");
-document.body.style.overflow="";
-},
-bindLightbox(){
-const modal=document.getElementById("kesiswaan-modal");
-const closeBtn=document.getElementById("kesiswaan-modal-close");
-if(!modal)return;
-if(closeBtn)closeBtn.addEventListener("click",()=>this.closeLightbox());
-modal.addEventListener("click",(e)=>{
-if(e.target===modal)this.closeLightbox();
-});
-document.addEventListener("keydown",(e)=>{
-if(e.key==="Escape"&&modal.classList.contains("active"))this.closeLightbox();
 });
 }
 };
 document.addEventListener("layoutReady",()=>{
-KesiswaanPage.init();
+GaleriPage.init();
 });

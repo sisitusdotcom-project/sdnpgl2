@@ -4,6 +4,12 @@ async init(){
 await this.loadGallery();
 this.bindFilters();
 this.bindLightbox();
+if(window.location.hash){
+const target=document.querySelector(window.location.hash);
+if(target){
+setTimeout(()=>target.scrollIntoView({behavior:"smooth",block:"start"}),150);
+}
+}
 },
 async loadGallery(){
 try{

@@ -23,21 +23,25 @@ return;
 const text=`Halo Admin UPT SDN Punggul 02,
 Saya: *${nama}* (${kontak||"Wali Murid"})
 Kategori: *${kategori}*
-
 *Pesan:*
 ${pesan}`;
 const encoded=encodeURIComponent(text);
-const waUrl=`https://wa.me/6283841741718?text=${encoded}`;
+const waUrl=`https://wa.me/6285151983457?text=${encoded}`;
 window.open(waUrl,"_blank");
 });
 }
 form.addEventListener("submit",(e)=>{
 e.preventDefault();
-const {nama,pesan}=getFormData();
+const {nama,kontak,kategori,pesan}=getFormData();
 if(!nama||!pesan){
 alert("Mohon lengkapi Nama dan Pesan Anda.");
 return;
 }
+try{
+const stored=JSON.parse(localStorage.getItem("kontak_inquiries")||"[]");
+stored.push({nama,kontak,kategori,pesan,waktu:new Date().toLocaleString("id-ID")});
+localStorage.setItem("kontak_inquiries",JSON.stringify(stored));
+}catch(err){}
 if(toast){
 toast.classList.add("active");
 setTimeout(()=>{

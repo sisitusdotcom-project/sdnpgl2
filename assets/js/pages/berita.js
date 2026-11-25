@@ -7,6 +7,7 @@ await this.fetchNews();
 this.bindFilters();
 this.bindSearch();
 this.bindModalEvents();
+this.checkUrlReadParam();
 },
 async fetchNews(){
 const gridTarget=document.getElementById("berita-grid-container");
@@ -62,6 +63,11 @@ this.openModal(featured);
 },
 applyFilters(){
 const gridTarget=document.getElementById("berita-grid-container");
+const featuredTarget=document.getElementById("featured-story-container");
+if(featuredTarget){
+const isSearching=Boolean(this.searchQuery&&this.searchQuery.trim()!=="");
+featuredTarget.classList.toggle("d-none",isSearching);
+}
 if(!gridTarget)return;
 let filtered=this.allNews;
 if(this.activeFilter&&this.activeFilter!=="all"){
@@ -72,7 +78,7 @@ const q=this.searchQuery.toLowerCase();
 filtered=filtered.filter((n)=>n.judul.toLowerCase().includes(q)||n.ringkasan.toLowerCase().includes(q)||n.penulis.toLowerCase().includes(q));
 }
 if(!filtered||filtered.length===0){
-gridTarget.innerHTML='<div class="card p-4 text-center text-muted w-100"><i class="ph ph-magnifying-glass" style="font-size:2rem;display:block;margin-bottom:8px;"></i>Tidak ada warta yang cocok dengan pencarian atau filter yang dipilih.</div>';
+gridTarget.innerHTML='<div class="card p-4 text-center text-muted w-100"><i class="ph ph-magnifying-glass empty-search-icon"></i>Tidak ada warta yang cocok dengan pencarian atau filter yang dipilih.</div>';
 return;
 }
 gridTarget.innerHTML=filtered.map((item)=>{
@@ -122,12 +128,56 @@ this.applyFilters();
 });
 },
 bindSearch(){
+const searchForm=document.getElementById("berita-search-form");
 const searchInput=document.getElementById("berita-search-input");
-if(!searchInput)return;
+if(searchInput){
 searchInput.addEventListener("input",(e)=>{
 this.searchQuery=e.target.value;
 this.applyFilters();
 });
+}
+if(searchForm){
+searchForm.addEventListener("submit",(e)=>{
+e.preventDefault();
+if(searchInput){
+this.searchQuery=searchInput.value;
+this.applyFilters();
+}
+});
+}
+const urlParams=new URLSearchParams(window.location.search);
+if(urlParams.has("focus")||urlParams.has("q")){
+const q=urlParams.get("q")||"";
+if(searchInput){
+searchInput.value=q;
+this.searchQuery=q;
+searchInput.focus();
+searchInput.scrollIntoView({behavior:"smooth",block:"center"});
+if(q){
+this.applyFilters();
+}
+}
+}
+if(urlParams.has("cat")){
+const c=urlParams.get("cat");
+const matchingBtn=document.querySelector(`.filter-btn[data-filter="${c}"]`);
+if(matchingBtn){
+document.querySelectorAll(".filter-btn").forEach((b)=>b.classList.remove("active"));
+matchingBtn.classList.add("active");
+this.activeFilter=c;
+this.applyFilters();
+}
+}
+},
+checkUrlReadParam(){
+const urlParams=new URLSearchParams(window.location.search);
+if(urlParams.has("read")){
+const readId=urlParams.get("read");
+const item=this.allNews.find((n)=>n.id===readId);
+if(item){
+setTimeout(()=>this.openModal(item),250);
+}
+}
 },
 bindReadButtons(){
 const btns=document.querySelectorAll("[data-read-id]");
@@ -149,6 +199,8 @@ const modalDate=document.getElementById("modal-article-date");
 const modalAuthor=document.getElementById("modal-article-author");
 const modalCat=document.getElementById("modal-article-cat");
 const modalBody=document.getElementById("modal-article-paragraphs");
+const shareWaBtn=document.getElementById("modal-share-wa");
+const printBtn=document.getElementById("modal-print-btn");
 if(!modal)return;
 if(modalImg)modalImg.setAttribute("src",item.gambar);
 if(modalTitle)modalTitle.textContent=item.judul;
@@ -156,8 +208,31 @@ if(modalDate)modalDate.textContent=item.tanggal;
 if(modalAuthor)modalAuthor.textContent=item.penulis;
 if(modalCat)modalCat.textContent=item.kategori;
 if(modalBody){
-const paragraphs=item.isi.split("\n\n");
+const paragraphs=item.isi.split(/\n\s*\n/);
 modalBody.innerHTML=paragraphs.map((p)=>`<p>${p.replace(/\n/g,"<br>")}</p>`).join("");
+}
+if(shareWaBtn){
+const shareText=`Warta Resmi UPT SDN Punggul 02:
+*${item.judul}* (${item.tanggal})
+${item.ringkasan}
+Baca selengkapnya di: ${window.location.origin}/berita/index.html?read=${item.id}`;
+shareWaBtn.setAttribute("href",`https://wa.me/?text=${encodeURIComponent(shareText)}`);
+}
+if(printBtn){
+printBtn.onclick=()=>window.print();
+}
+const copyBtn=document.getElementById("modal-copy-link");
+if(copyBtn){
+copyBtn.onclick=()=>{
+const url=`${window.location.origin}/berita/index.html?read=${item.id}`;
+navigator.clipboard.writeText(url).then(()=>{
+const txt=document.getElementById("copy-btn-text");
+if(txt){
+txt.textContent="Tersalin!";
+setTimeout(()=>{txt.textContent="Salin Tautan";},2000);
+}
+}).catch(()=>{});
+};
 }
 modal.classList.add("active");
 document.body.style.overflow="hidden";

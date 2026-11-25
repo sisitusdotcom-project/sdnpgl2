@@ -1,5 +1,6 @@
 *,*::before,*::after{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+[id]{scroll-margin-top:80px;}
 body{min-height:100vh;background-color:var(--color-bg-body);color:var(--color-text-main);font-family:var(--font-sans);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;}
 img,picture,video,canvas,svg{display:block;max-width:100%;height:auto;}
 input,button,textarea,select{font:inherit;color:inherit;max-width:100%;}

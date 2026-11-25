@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Warta resmi sekolah, maklumat pengumuman kedinasan, kabar kegiatan belajar mengajar, kurikulum merdeka P5, dan dokumentasi prestasi SDN Punggul 02 Gedangan - Sidoarjo.">
 <title>Warta, Agenda, &amp; Pengumuman Sekolah | SDN Punggul 02</title>
+<meta property="og:site_name" content="SDN Punggul 02 Gedangan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Warta, Agenda, &amp; Pengumuman Sekolah | SDN Punggul 02">
+<meta property="og:description" content="Warta resmi sekolah, maklumat pengumuman kedinasan, kabar kegiatan belajar mengajar, kurikulum merdeka P5, dan dokumentasi prestasi SDN Punggul 02 Gedangan - Sidoarjo.">
+<meta property="og:image" content="/assets/img/gedung-sekolah.jpg">
+<meta property="og:url" content="/berita/index.html">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Warta, Agenda, &amp; Pengumuman Sekolah | SDN Punggul 02">
+<meta name="twitter:description" content="Warta resmi sekolah, maklumat pengumuman kedinasan, kabar kegiatan belajar mengajar, kurikulum merdeka P5, dan dokumentasi prestasi SDN Punggul 02 Gedangan - Sidoarjo.">
+<meta name="twitter:image" content="/assets/img/gedung-sekolah.jpg">
 <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
@@ -40,10 +51,10 @@
 <span class="berita-chip"><i class="ph-fill ph-newspaper"></i> Kanal Publikasi Resmi UPT SDN Punggul 02</span>
 <h1>Warta, Agenda, &amp; Pengumuman Sekolah</h1>
 <p class="lead">Pusat informasi resmi kegiatan belajar mengajar, sosialisasi kedinasan, kalender agenda akademik, dan etalase prestasi siswa di Gedangan - Sidoarjo.</p>
-<div class="berita-search-bar">
-<input type="text" id="berita-search-input" placeholder="Cari warta, edaran, atau agenda sekolah..." aria-label="Cari warta sekolah">
-<button type="button" class="search-icon-btn" aria-label="Lakukan Pencarian"><i class="ph-bold ph-magnifying-glass"></i></button>
-</div>
+<form class="berita-search-bar" role="search" id="berita-search-form" action="/berita/index.html" method="get">
+<input type="text" id="berita-search-input" name="q" placeholder="Cari warta, edaran, atau agenda sekolah..." aria-label="Cari warta sekolah" autocomplete="off">
+<button type="submit" class="search-icon-btn" aria-label="Lakukan Pencarian"><i class="ph-bold ph-magnifying-glass"></i></button>
+</form>
 </div>
 </section>
 <section class="section-py" aria-label="Daftar Warta dan Pengumuman">
@@ -87,6 +98,11 @@
 </div>
 <div class="modal-article-paragraphs" id="modal-article-paragraphs">
 <p>-</p>
+</div>
+<div class="modal-article-actions">
+<a href="https://wa.me/" id="modal-share-wa" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-pill"><i class="ph-bold ph-whatsapp-logo"></i><span>Bagikan ke WhatsApp</span></a>
+<button type="button" id="modal-copy-link" class="btn btn-outline-dark btn-pill"><i class="ph-bold ph-link"></i><span id="copy-btn-text">Salin Tautan</span></button>
+<button type="button" id="modal-print-btn" class="btn btn-outline-dark btn-pill"><i class="ph-bold ph-printer"></i><span>Cetak / Unduh PDF</span></button>
 </div>
 </div>
 </div>

@@ -35,7 +35,14 @@ const url=new URL(href,window.location.origin);
 if(url.origin!==window.location.origin)return;
 const cur=window.location.pathname.replace(/\/index\.html$/,"/").replace(/\/$/,"")||"/";
 const dest=url.pathname.replace(/\/index\.html$/,"/").replace(/\/$/,"")||"/";
-if(cur===dest&&!url.hash){
+if(cur===dest){
+if(url.hash){
+const targetEl=document.querySelector(url.hash);
+if(targetEl){
+e.preventDefault();
+targetEl.scrollIntoView({behavior:"smooth",block:"start"});
+}
+}
 return;
 }
 }catch(err){

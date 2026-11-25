@@ -25,7 +25,7 @@
 .nav-link:hover{color:var(--color-primary);background-color:var(--color-surface-subtle);}
 .nav-link.active{color:var(--color-primary);font-weight:800;}
 .nav-actions{display:flex;align-items:center;gap:4px;flex-shrink:0;}
-.nav-actions .btn-icon{display:none;}
+.nav-actions .btn-icon{display:inline-flex;}
 .theme-toggle{width:44px;height:44px;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:var(--radius-full);color:var(--color-text-main);transition:background-color 0.2s ease,color 0.2s ease;cursor:pointer;touch-action:manipulation;}
 .theme-toggle:hover{background-color:var(--color-surface-subtle);color:var(--color-primary);}
 .theme-toggle i{font-size:1.125rem;}
@@ -44,8 +44,8 @@
 .drawer-link i{font-size:1.125rem;flex-shrink:0;}
 .drawer-actions{margin-top:auto;padding-top:var(--space-md);display:flex;flex-direction:column;gap:var(--space-xs);min-width:0;pointer-events:auto;}
 .drawer-actions .btn{pointer-events:auto;touch-action:manipulation;}
-.drawer-backdrop{position:fixed;inset:0;background-color:rgba(7,31,45,0.5);z-index:150;opacity:0;pointer-events:none;transition:opacity 0.3s ease;}
-.drawer-backdrop.active{opacity:1;pointer-events:auto;}
+.drawer-backdrop{position:fixed;inset:0;background-color:rgba(7,31,45,0.5);z-index:150;opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.3s ease,visibility 0.3s ease;}
+.drawer-backdrop.active{opacity:1;visibility:visible;pointer-events:auto;}
 @media (min-width:640px){
 .topbar-content{justify-content:space-between;}
 .topbar-info{justify-content:flex-start;}

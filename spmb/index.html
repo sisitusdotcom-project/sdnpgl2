@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Informasi resmi Penerimaan Peserta Didik Baru (SPMB / PPDB) UPT SD Negeri Punggul 02 Gedangan - Sidoarjo. Tiga jalur pendaftaran zonasi, cek kelayakan usia calon siswa, jadwal alur seleksi, berkas pendaftaran, dan konsultasi panitia.">
 <title>Penerimaan Siswa Baru (SPMB) | SDN Punggul 02 Gedangan</title>
+<meta property="og:site_name" content="SDN Punggul 02 Gedangan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Penerimaan Siswa Baru (SPMB) | SDN Punggul 02 Gedangan">
+<meta property="og:description" content="Informasi resmi Penerimaan Peserta Didik Baru (SPMB / PPDB) UPT SD Negeri Punggul 02 Gedangan - Sidoarjo. Tiga jalur pendaftaran zonasi, cek kelayakan usia calon siswa, jadwal alur seleksi, berkas pendaftaran, dan konsultasi panitia.">
+<meta property="og:image" content="/assets/img/gedung-sekolah.jpg">
+<meta property="og:url" content="/spmb/index.html">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Penerimaan Siswa Baru (SPMB) | SDN Punggul 02 Gedangan">
+<meta name="twitter:description" content="Informasi resmi Penerimaan Peserta Didik Baru (SPMB / PPDB) UPT SD Negeri Punggul 02 Gedangan - Sidoarjo. Tiga jalur pendaftaran zonasi, cek kelayakan usia calon siswa, jadwal alur seleksi, berkas pendaftaran, dan konsultasi panitia.">
+<meta name="twitter:image" content="/assets/img/gedung-sekolah.jpg">
 <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,7 +130,7 @@
 </div>
 </div>
 </section>
-<section class="section-py bg-subtle" aria-label="Kalkulator Kelayakan Usia Siswa">
+<section class="section-py bg-subtle" id="cek-usia" aria-label="Kalkulator Kelayakan Usia Siswa">
 <div class="container">
 <div class="calc-card">
 <div class="calc-top">
@@ -136,6 +147,35 @@
 </div>
 </div>
 <div id="spmb-calc-result" class="calc-result-box" aria-live="polite"></div>
+</div>
+</div>
+<div class="calc-card mt-lg" id="cek-zonasi">
+<div class="calc-top">
+<span class="calc-tag"><i class="ph-fill ph-map-pin-line"></i> Simulasi Zonasi Wilayah</span>
+<h2 class="calc-title">Hitung Estimasi Jarak Rumah ke Sekolah</h2>
+<p class="calc-desc">Perkirakan jarak domisili tempat tinggal calon peserta didik ke titik koordinat SDN Punggul 02 (-7.3989, 112.7331) untuk memetakan prioritas seleksi Jalur Zonasi.</p>
+</div>
+<div class="calc-form">
+<div class="calc-input-group">
+<label for="select-zonasi-wilayah" class="calc-lbl">Pilih Dusun / Desa Domisili Sesuai KK:</label>
+<div class="calc-input-row">
+<select id="select-zonasi-wilayah" class="spmb-date-input" aria-label="Pilih Wilayah Domisili">
+<option value="" disabled selected>-- Pilih Dusun / Desa Sekitar --</option>
+<option value="-7.3988,112.7320,Punggul Krajan">Dusun Punggul Krajan (RT 01 - RT 05)</option>
+<option value="-7.3982,112.7345,Punggul Tengah">Dusun Punggul Tengah / Sekitar Balai Desa</option>
+<option value="-7.4035,112.7330,Punggul Selatan">Dusun Punggul Selatan / Perbatasan</option>
+<option value="-7.3912,112.7315,Keboansikep">Desa Keboansikep (Kec. Gedangan)</option>
+<option value="-7.3875,112.7270,Keboananom">Desa Keboananom (Kec. Gedangan)</option>
+<option value="-7.4080,112.7240,Seruni">Desa Seruni (Kec. Gedangan)</option>
+<option value="-7.3880,112.7410,Gedangan">Desa Gedangan (Kec. Gedangan)</option>
+<option value="-7.3750,112.7380,Sawotratap">Desa Sawotratap (Kec. Gedangan)</option>
+<option value="-7.3900,112.7100,Luar Gedangan">Luar Wilayah Kecamatan Gedangan</option>
+</select>
+<button type="button" id="btn-cek-zonasi" class="btn btn-primary btn-pill"><span>Hitung Jarak</span><i class="ph-bold ph-compass"></i></button>
+<button type="button" id="btn-gps-zonasi" class="btn btn-outline-dark btn-pill" title="Deteksi via GPS"><i class="ph-bold ph-crosshair"></i><span>GPS Saya</span></button>
+</div>
+</div>
+<div id="spmb-zonasi-result" class="calc-result-box" aria-live="polite"></div>
 </div>
 </div>
 </div>
@@ -184,7 +224,7 @@
 </div>
 </div>
 </section>
-<section class="section-py bg-subtle" aria-label="Dokumen Persyaratan Masuk">
+<section class="section-py bg-subtle" id="syarat-spmb" aria-label="Dokumen Persyaratan Masuk">
 <div class="container">
 <div class="section-title-wrapper">
 <div class="section-title-group">
@@ -195,22 +235,29 @@
 <div class="syarat-wrapper">
 <div class="syarat-col">
 <h3 class="syarat-col-title"><i class="ph-bold ph-folder-notch-open"></i><span>Berkas Pokok Wajib (Semua Jalur)</span></h3>
-<ul class="syarat-list">
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Akta Kelahiran calon peserta didik (asli diperlihatkan, fotokopi 2 lembar).</span></li>
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Kartu Keluarga (KK) orang tua/wali domisili Kecamatan Gedangan (asli &amp; fotokopi 2 lembar).</span></li>
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Kartu Tanda Penduduk (KTP) kedua orang tua / wali murid (fotokopi 2 lembar).</span></li>
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Pasfoto terbaru calon siswa ukuran 3x4 berwarna dengan latar belakang merah/biru (4 lembar).</span></li>
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Surat Pernyataan Keabsahan Dokumen Bermaterai (formulir disediakan panitia).</span></li>
+<div class="checklist-progress-box">
+<div class="checklist-progress-info">
+<span>Kesiapan Berkas Anda: <strong id="checklist-counter">0 dari 10 Berkas Siap</strong></span>
+<button type="button" id="btn-reset-checklist" class="btn-reset-link"><i class="ph ph-arrow-counter-clockwise"></i> Reset</button>
+</div>
+<div class="checklist-track"><div class="checklist-bar" id="checklist-progress-bar"></div></div>
+</div>
+<ul class="syarat-list" id="spmb-syarat-list">
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="akta"><span>Akta Kelahiran calon peserta didik (asli diperlihatkan, fotokopi 2 lembar).</span></label></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="kk"><span>Kartu Keluarga (KK) orang tua/wali domisili Kecamatan Gedangan (asli &amp; fotokopi 2 lembar).</span></label></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="ktp"><span>Kartu Tanda Penduduk (KTP) kedua orang tua / wali murid (fotokopi 2 lembar).</span></label></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="foto"><span>Pasfoto terbaru calon siswa ukuran 3x4 berwarna dengan latar belakang merah/biru (4 lembar).</span></label></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="pernyataan"><span>Surat Pernyataan Keabsahan Dokumen Bermaterai (formulir disediakan panitia).</span></label></li>
 </ul>
 </div>
 <div class="syarat-col">
 <h3 class="syarat-col-title"><i class="ph-bold ph-file-plus"></i><span>Berkas Khusus &amp; Dokumen Pendukung</span></h3>
 <ul class="syarat-list">
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Ijazah / Surat Keterangan Lulus dari jenjang TK/RA (bila memiliki, tidak wajib).</span></li>
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Kartu KIP, PKH, atau KKS aktif khusus bagi pendaftar Jalur Afirmasi prasejahtera.</span></li>
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Surat Keputusan Pindah Tugas Orang Tua dari instansi kerja bagi Jalur Perpindahan.</span></li>
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Surat rekomendasi tertulis dari psikolog profesional bagi calon siswa berusia di bawah 6 tahun.</span></li>
-<li class="syarat-item"><i class="ph-bold ph-check-circle"></i><span>Map kertas berkas: Warna Biru (Laki-laki) dan Warna Merah (Perempuan).</span></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="ijazah-tk"><span>Ijazah / Surat Keterangan Lulus dari jenjang TK/RA (bila memiliki, tidak wajib).</span></label></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="kip"><span>Kartu KIP, PKH, atau KKS aktif khusus bagi pendaftar Jalur Afirmasi prasejahtera.</span></label></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="pindah"><span>Surat Keputusan Pindah Tugas Orang Tua dari instansi kerja bagi Jalur Perpindahan.</span></label></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="rekom"><span>Surat rekomendasi tertulis dari psikolog profesional bagi calon siswa berusia di bawah 6 tahun.</span></label></li>
+<li class="syarat-item"><label class="syarat-label"><input type="checkbox" class="syarat-chk" data-id="map"><span>Map kertas berkas: Warna Biru (Laki-laki) dan Warna Merah (Perempuan).</span></label></li>
 </ul>
 </div>
 </div>
@@ -245,9 +292,9 @@
 <div class="posko-list">
 <div class="posko-list-item"><i class="ph-bold ph-map-pin"></i><span>Ruang Tata Usaha UPT SDN Punggul 02 (Jl. Rajawali No. 51 Punggul, Gedangan, Sidoarjo)</span></div>
 <div class="posko-list-item"><i class="ph-bold ph-clock"></i><span>Senin - Kamis: 07.00 - 14.30 WIB | Jumat: 07.00 - 11.00 WIB | Sabtu: 07.00 - 12.00 WIB</span></div>
-<div class="posko-list-item"><i class="ph-bold ph-phone"></i><span>Hotline WhatsApp Resmi: +62 838-4174-1718 (Panitia SPMB)</span></div>
+<div class="posko-list-item"><i class="ph-bold ph-phone"></i><span>Hotline WhatsApp Resmi: +62 851-5198-3457 (Panitia SPMB)</span></div>
 </div>
-<a href="https://wa.me/6283841741718?text=Halo%20Panitia%20SPMB%20SDN%20Punggul%2002,%20saya%20ingin%20konsultasi%20pendaftaran" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-pill"><span>Konsultasi WhatsApp Panitia</span><i class="ph-bold ph-whatsapp-logo"></i></a>
+<a href="https://wa.me/6285151983457?text=Halo%20Panitia%20SPMB%20SDN%20Punggul%2002,%20saya%20ingin%20konsultasi%20pendaftaran" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-pill"><span>Konsultasi WhatsApp Panitia</span><i class="ph-bold ph-whatsapp-logo"></i></a>
 </div>
 </div>
 <div>

@@ -2,6 +2,8 @@ const SPMBPage={
 async init(){
 await this.renderFAQ();
 this.initAgeChecker();
+this.initZonasiChecker();
+this.initChecklist();
 },
 async renderFAQ(){
 const target=document.getElementById("spmb-faq-container");
@@ -101,6 +103,137 @@ resultBox.innerHTML=`
 <p class="calc-result-msg">${msg}</p>
 `;
 });
+},
+initZonasiChecker(){
+const btnCalc=document.getElementById("btn-cek-zonasi");
+const btnGps=document.getElementById("btn-gps-zonasi");
+const select=document.getElementById("select-zonasi-wilayah");
+const resultBox=document.getElementById("spmb-zonasi-result");
+if(!resultBox)return;
+const schoolLat=-7.3989;
+const schoolLon=112.7331;
+const haversine=(lat1,lon1,lat2,lon2)=>{
+const R=6371;
+const dLat=(lat2-lat1)*Math.PI/180;
+const dLon=(lon2-lon1)*Math.PI/180;
+const a=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);
+const c=2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+return R*c;
+};
+const displayResult=(distanceKm,locName)=>{
+resultBox.classList.add("active");
+let badgeClass="badge-primary";
+let badgeText="Zonasi Ring 1";
+let title="Prioritas Mutlak Wilayah Desa Punggul";
+let msg="Lokasi domisili berada di kawasan ring utama SDN Punggul 02. Berkas pendaftaran ananda memiliki peluang kelulusan tertinggi pada jalur Zonasi Domisili.";
+if(distanceKm<1.0){
+badgeClass="badge-primary";
+badgeText="Zonasi Ring 1 (< 1.0 km)";
+title="Prioritas Mutlak Wilayah Desa Punggul";
+msg=`Lokasi domisili (${locName}) berjarak sekitar ${(distanceKm*1000).toFixed(0)} meter dari sekolah. Masuk kuota prioritas utama zonasi desa.`;
+}else if(distanceKm<=2.5){
+badgeClass="badge-secondary";
+badgeText="Zonasi Ring 2 (1.0 - 2.5 km)";
+title="Wilayah Zonasi Kecamatan Gedangan";
+msg=`Lokasi domisili (${locName}) berjarak sekitar ${distanceKm.toFixed(2)} km dari sekolah. Berada dalam cakupan zonasi antar-desa se-Kecamatan Gedangan.`;
+}else{
+badgeClass="badge-accent";
+badgeText="Luar Zonasi (> 2.5 km)";
+title="Zonasi Luar / Jalur Lain Disarankan";
+msg=`Lokasi domisili (${locName}) berjarak sekitar ${distanceKm.toFixed(2)} km dari sekolah. Disarankan memanfaatkan Jalur Afirmasi atau Mutasi Orang Tua jika kuota zonasi terpenuhi.`;
+}
+resultBox.innerHTML=`
+<div class="calc-result-header">
+<span class="badge ${badgeClass}">${badgeText}</span>
+<span class="calc-result-age">Estimasi Jarak: ${distanceKm<1?(distanceKm*1000).toFixed(0)+" Meter":distanceKm.toFixed(2)+" Km"}</span>
+</div>
+<div class="calc-result-title">${title}</div>
+<p class="calc-result-msg">${msg}</p>
+`;
+};
+if(btnCalc&&select){
+btnCalc.addEventListener("click",()=>{
+const val=select.value;
+if(!val){
+resultBox.classList.add("active");
+resultBox.innerHTML='<div class="calc-result-title text-accent">Silakan pilih nama dusun atau desa domisili terlebih dahulu.</div>';
+return;
+}
+const parts=val.split(",");
+const lat=parseFloat(parts[0]);
+const lon=parseFloat(parts[1]);
+const name=parts[2]||"Domisili Anda";
+const dist=haversine(lat,lon,schoolLat,schoolLon);
+displayResult(dist,name);
+});
+}
+if(btnGps){
+btnGps.addEventListener("click",()=>{
+if(!navigator.geolocation){
+alert("Perangkat Anda tidak mendukung fitur geolokasi GPS.");
+return;
+}
+btnGps.disabled=true;
+btnGps.innerHTML='<i class="ph ph-spinner"></i><span>Mencari GPS...</span>';
+navigator.geolocation.getCurrentPosition((pos)=>{
+btnGps.disabled=false;
+btnGps.innerHTML='<i class="ph-bold ph-crosshair"></i><span>GPS Saya</span>';
+const userLat=pos.coords.latitude;
+const userLon=pos.coords.longitude;
+const dist=haversine(userLat,userLon,schoolLat,schoolLon);
+displayResult(dist,"GPS Perangkat Anda");
+},()=>{
+btnGps.disabled=false;
+btnGps.innerHTML='<i class="ph-bold ph-crosshair"></i><span>GPS Saya</span>';
+alert("Tidak dapat mengakses GPS. Mohon aktifkan izin lokasi di browser atau pilih wilayah dari daftar.");
+},{timeout:8000});
+});
+}
+},
+initChecklist(){
+const checkboxes=document.querySelectorAll(".syarat-chk");
+const counterEl=document.getElementById("checklist-counter");
+const barEl=document.getElementById("checklist-progress-bar");
+const resetBtn=document.getElementById("btn-reset-checklist");
+if(checkboxes.length===0)return;
+const storageKey="spmb_checklist_state";
+let saved={};
+try{
+saved=JSON.parse(localStorage.getItem(storageKey)||"{}");
+}catch(err){}
+const updateProgress=()=>{
+let count=0;
+checkboxes.forEach((chk)=>{
+const id=chk.getAttribute("data-id");
+const isChecked=Boolean(saved[id]);
+chk.checked=isChecked;
+const parent=chk.closest(".syarat-item");
+if(parent)parent.classList.toggle("checked",isChecked);
+if(isChecked)count++;
+});
+const total=checkboxes.length;
+if(counterEl)counterEl.textContent=`${count} dari ${total} Berkas Siap`;
+if(barEl){
+const pct=(count/total)*100;
+barEl.style.width=`${pct}%`;
+}
+};
+checkboxes.forEach((chk)=>{
+chk.addEventListener("change",()=>{
+const id=chk.getAttribute("data-id");
+saved[id]=chk.checked;
+localStorage.setItem(storageKey,JSON.stringify(saved));
+updateProgress();
+});
+});
+if(resetBtn){
+resetBtn.addEventListener("click",()=>{
+saved={};
+localStorage.removeItem(storageKey);
+updateProgress();
+});
+}
+updateProgress();
 }
 };
 document.addEventListener("layoutReady",()=>{

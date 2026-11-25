@@ -25,9 +25,9 @@
   },
   {
     "id": "fasilitas-4",
-    "nama": "Lahan Kampus & Sarana Olahraga",
+    "nama": "Lahan Sekolah & Sarana Olahraga",
     "jumlah": "Luas 2.289 m²",
-    "deskripsi": "Kawasan kampus sekolah seluas 2.289 m² dilengkapi lapangan upacara berlantai paving, lapangan olahraga siswa, dan area bermain aman.",
+    "deskripsi": "Kawasan lingkungan sekolah seluas 2.289 m² dilengkapi lapangan upacara berlantai paving, lapangan olahraga siswa, dan area bermain aman.",
     "gambar": "/assets/img/kegiatan-olahraga.jpg",
     "badge": "Kebugaran"
   },

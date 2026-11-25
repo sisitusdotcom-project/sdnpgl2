@@ -90,3 +90,4 @@
 .pillar-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
 .gtk-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-md);}
 }
+.gtk-search-box{max-width:540px;width:100%;margin:0 auto var(--space-md);min-width:0;}
